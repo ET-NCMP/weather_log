@@ -33,12 +33,12 @@ def get_climate_files(month):
     moidx = month - 1  # pythonic
 
     # MSLP
-    f1 = Dataset(os.path.join(DATADIR, "mslp_climate_era5_1981_2010.nc"), 'r')
+    f1 = Dataset(os.path.join(DATADIR, "mslp_climate_era5_1991_2020.nc"), 'r')
     mslp_climate = f1.variables['mslp_climate'][moidx]
     f1.close()
 
     # Z500 and thickness
-    f2 = Dataset(os.path.join(DATADIR, "z500_thickness_climate_era5_1981_2010.nc"), 'r')
+    f2 = Dataset(os.path.join(DATADIR, "z500_thickness_climate_era5_1991_2020.nc"), 'r')
     z500_climate = f2.variables['z500_climate'][moidx]
     thickness_climate = f2.variables['thickness_climate'][moidx]
     f2.close()
